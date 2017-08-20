@@ -8,6 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <StackPanel>
+            <TextBlock>현재좌표</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="Latitude"></TextBox>
+                <TextBox x:Name="Longitude"></TextBox>
+                <Button x:Name="Confirm" Click="Confirm_Click">조회</Button>
+            </StackPanel>
+            <TextBlock>현재주소</TextBlock>
+            <TextBlock x:Name="NowAdress"></TextBlock>
+        </StackPanel>
     </Grid>
 </Page>

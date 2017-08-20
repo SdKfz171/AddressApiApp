@@ -26,5 +26,10 @@ namespace AddressApiApp
         {
             this.InitializeComponent();
         }
+        private async void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            RootObject rootObject = await AddressManager.GetAddress(double.Parse(Latitude.Text), double.Parse(Longitude.Text));
+            NowAdress.Text = rootObject.fullName;
+        }
     }
 }
